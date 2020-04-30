@@ -1,4 +1,4 @@
-package Sorts;
+package sf.sort;
 
 import java.util.Arrays;
 import java.util.List;

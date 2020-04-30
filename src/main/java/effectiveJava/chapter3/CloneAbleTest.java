@@ -40,16 +40,19 @@ public class CloneAbleTest {
         stu1.setAge(20);
         stu1.setName("zhangsan");
         stu1.setSex(new StringBuffer("男"));
-        s1.setStu(stu1);
-        System.out.println("s1: " + s1 + " s1的hashcode:" + s1.hashCode() + "  s1中stu1的hashcode:" + s1.getStu().hashCode());
+        s1.setStudent(stu1);
+        System.out.println("s1: " + s1 + " s1的hashcode:" + s1.hashCode() + "  s1中stu1的hashcode:" + s1.getStudent().hashCode());
         School s2 = s1.clone();  //调用重写的clone方法，clone出一个新的school---s2
-        System.out.println("s2: " + s2 + " s2的hashcode:" + s2.hashCode() + " s2中stu1的hashcode:" + s2.getStu().hashCode());
+        s2.setStuNums(10);
+        s2.setSchoolName("ABC");
+        System.out.println("s2: " + s2 + " s2的hashcode:" + s2.hashCode() + " s2中stu1的hashcode:" + s2.getStudent().hashCode());
+        System.out.println("s1: " + s1 + " s1的hashcode:" + s1.hashCode() + "  s1中stu1的hashcode:" + s1.getStudent().hashCode());
 
     }
 }
 
 @Data
-class Student {
+class Student implements Cloneable{
     private String name;   //姓名
     private int age;       //年龄
     private StringBuffer sex;  //性别
@@ -58,23 +61,33 @@ class Student {
     public String toString() {
         return "Student [name=" + name + ", age=" + age + ", sex=" + sex + "]";
     }
+
+    @Override
+    protected Student clone() throws CloneNotSupportedException {
+        return (Student) super.clone();
+    }
+
 }
 
 @Data
 class School implements Cloneable {
     private String schoolName;   //学校名称
     private int stuNums;         //学校人数
-    private Student stu;         //一个学生
+    private Student student;         //一个学生
 
     @Override
     protected School clone() throws CloneNotSupportedException {
         // TODO Auto-generated method stub
-        return (School) super.clone();
+        //return (School) super.clone();
+        School deepObj = (School) super.clone();
+        Student student = (Student)deepObj.getStudent();
+        deepObj.setStudent((Student) student.clone());
+        return deepObj;
     }
 
     @Override
     public String toString() {
-        return "School [schoolName=" + schoolName + ", stuNums=" + stuNums + ", stu=" + stu + "]";
+        return "School [schoolName=" + schoolName + ", stuNums=" + stuNums + ", stu=" + student + "]";
     }
 }
 

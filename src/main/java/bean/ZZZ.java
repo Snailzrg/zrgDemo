@@ -1,12 +1,6 @@
 package bean;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import com.alibaba.fastjson.JSONObject;
+import java.util.*;
 
 public class ZZZ {
 	
@@ -21,7 +15,8 @@ public class ZZZ {
 		
 		
 		List<User> invoices = new ArrayList<User>();
-		for (Iterator<Map> localIterator = ulist.iterator(); localIterator.hasNext();) {
+		for (Iterator<Map> localIterator = ulist.iterator();
+			 localIterator.hasNext();) {
 			Object item = localIterator.next();
 			User invoice = (User) item;
 			invoices.add(invoice);
