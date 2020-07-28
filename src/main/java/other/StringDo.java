@@ -23,9 +23,9 @@ public class StringDo {
         String ss = "6,国网天津电力,0,,,0,0,0300,9999FY02";
 
         boolean flag = false;
-        String text = specialCharProcess(ss, "内部融资单位分布");
+        String text = specialCharProcess("58,四、集团账户,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,58,", "内部融资单位分布");
 
-        text = ss + " ";
+        text = text + " ";
         String[] textArray = text.split(",");
         Map map = new LinkedHashMap();
         for (int i = 0, length = textArray.length; i < length; i++) {
@@ -35,6 +35,10 @@ public class StringDo {
             }
             map.put("field" + (i + 1), textArray[i]);
             if (Arrays.asList(gridTableName).contains("内部融资单位分布")) {
+//                if ((i > 1 && i <= length - 3) && (!StringUtils.isNotBlank(textArray[i])
+//                        || !Arrays.asList(specialChar).contains(textArray[i]))) {
+//                    result = true;
+//                }
                 if (i > 1 && i <= length - 3) {
                     if (!StringUtils.isNotBlank(textArray[i])) {
                         System.out.println("I:" + i + "--isNotBlank");
@@ -43,8 +47,9 @@ public class StringDo {
                         System.out.println("I:" + i + "--contains");
                     }
                     //---------------------------------------------//
-                    if ((!StringUtils.isEmpty(textArray[i]))
+                    if ((!StringUtils.isNotBlank(textArray[i]))
                             || !Arrays.asList(specialChar).contains(textArray[i])) {
+                        System.out.println("-------XXXX----+"+i+"--"+textArray[i]);
                         flag = true;
                     }
                 }

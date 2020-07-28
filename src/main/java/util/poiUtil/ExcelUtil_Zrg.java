@@ -214,6 +214,21 @@ public class ExcelUtil_Zrg {
         return stringTable;
     }
 
+    /**
+     *  多线程读取
+     * @param workbook
+     * @param startRow
+     * @param startCol
+     * @param indexSheet
+     * @return
+     */
+    public static List<List<String>> getExcelStringWithThread(Workbook workbook, Integer startRow, Integer startCol, int indexSheet) {
+        List<List<String>> stringTable = new ArrayList<List<String>>();
+
+
+
+        return stringTable;
+    }
     /***
      * 返回MAP格式数据
      * String 拼接 -
