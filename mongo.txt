@@ -1,0 +1,1 @@
+mongod --dbpath "D:\WorkSoftWare\MongoDB\Server\4.0\data\db" --logpath "D:\WorkSoftWare\MongoDB\Server\4.0\log\mongo.log" --install --serviceName "MongoDB"
