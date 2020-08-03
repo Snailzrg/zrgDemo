@@ -60,7 +60,7 @@ public class RegularNumberDemo {
         String content = new String(simple1);
         Pattern pattern1 = Pattern.compile("^[0-9]+$", Pattern.MULTILINE);
         Matcher matcher1 = pattern1.matcher(content);
-        ArrayList<String> matchList = new ArrayList<>();
+        ArrayList<String> matchList = new ArrayList<String>();
 
         while (matcher.find()) {
             matchList.add(matcher.group());

@@ -7,8 +7,8 @@ package demo.singlotn2;
 public class AutoCloseableTest {
 
     public static void main(String [] args){
-        try(ConnectionLock lock = new ConnectionInnerLock()){
-
+        try{
+            ConnectionLock lock = new ConnectionInnerLock();
             //do something lock
             System.out.println("doing business...");
         } catch (Exception e) {

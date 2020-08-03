@@ -26,7 +26,7 @@ public class Demo {
         Employee e2 = new Employee("Ace", 22, 2000, 5924001);
         Employee e3 = new Employee("Keith", 35, 4000, 3924401);
         Employee e4 = new Employee("Keith", 25, 4000, 001);
-        List<Employee> employees = new ArrayList<>();
+        List<Employee> employees = new ArrayList<Employee>();
         employees.add(e1);
         employees.add(e2);
         employees.add(e3);

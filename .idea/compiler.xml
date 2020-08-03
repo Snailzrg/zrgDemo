@@ -10,8 +10,8 @@
         <module name="ZrgTestDemo11-16" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="ZrgTestDemo11-16" target="9" />
+    <bytecodeTargetLevel target="9">
+      <module name="ZrgTestDemo11-16" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

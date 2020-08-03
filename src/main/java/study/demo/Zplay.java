@@ -23,7 +23,7 @@ public class Zplay {
 
 
 
-        List<String> idss= new ArrayList<>();
+        List<String> idss= new ArrayList<String>();
         List<String> ids1= Arrays.asList("1","2","3","4");
         List<String> ids2= Arrays.asList("A","2","B","C");
         idss.addAll(ids1);

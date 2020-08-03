@@ -40,12 +40,16 @@ public class TryWithResourceDemo implements AutoCloseable {
     }
 
     static void copy2(String src, String dst) throws IOException {
-        try (InputStream inputStream = new FileInputStream(src);
-             OutputStream outputStream = new FileOutputStream(dst);) {
+        try  {
+            InputStream inputStream = new FileInputStream(src);
+            OutputStream outputStream = new FileOutputStream(dst);
             byte[] bytes = new byte[1024];
             int n;
-            while ((n = inputStream.read(bytes)) >= 0)
+            while ((n = inputStream.read(bytes)) >= 0) {
                 outputStream.write(bytes, 0, n);
+            }
+        }catch (Exception e){
+
         }
     }
 

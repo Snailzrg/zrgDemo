@@ -238,10 +238,12 @@ public class ExcelUtil_Zrg {
         Sheet sheet = workbook.getSheetAt(indexSheet);
         //默认 第二行开始 第一列
         int rowNum = sheet.getLastRowNum();
-        if (startRow == null || startRow > rowNum)
+        if (startRow == null || startRow > rowNum) {
             startRow = 2;
-        if (startCol == null)
+        }
+        if (startCol == null) {
             startCol = 0;
+        }
         for (int i = startRow; i <= rowNum; i++) {
             Row row = sheet.getRow(i);
             StringBuilder sb = new StringBuilder(i);

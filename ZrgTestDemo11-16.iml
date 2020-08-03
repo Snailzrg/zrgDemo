@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -42,5 +42,8 @@
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.58" level="project" />
     <orderEntry type="library" name="Maven: com.h2database:h2:1.4.197" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.5.8" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itext-asian:5.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf.tool:xmlworker:5.5.8" level="project" />
   </component>
 </module>
