@@ -87,18 +87,22 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.13</version>
 		</dependency>
-		<!--二维码 -->
-		<dependency>
+		<!--二维码<dependency>
 			<groupId>com.google.zxing</groupId>
 			<artifactId>core</artifactId>
 			<version>3.3.1</version>
-		</dependency>
-
+		</dependency> -->
 		<dependency>
 			<groupId>com.google.zxing</groupId>
-			<artifactId>javase</artifactId>
-			<version>3.3.1</version>
+			<artifactId>core</artifactId>
+			<version>1.7</version>
 		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>com.google.zxing</groupId>-->
+<!--			<artifactId>javase</artifactId>-->
+<!--			<version>3.3.1</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
@@ -124,6 +128,16 @@
 			<artifactId>netty-all</artifactId>
 			<version>4.1.6.Final</version>
 		</dependency>
+
+		<dependency>
+		<groupId>org.xhtmlrenderer</groupId>
+		<artifactId>core-renderer</artifactId>
+		<version>R8</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-codec</groupId>
+		<artifactId>commons-codec</artifactId>
+	</dependency>
 
 <!--		pdf  -->
 		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->

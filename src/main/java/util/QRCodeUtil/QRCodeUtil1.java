@@ -62,7 +62,7 @@ public class QRCodeUtil1 {
 
 
     public static void main(String[] args) {
-        String binary =QRCodeUtil1.creatRrCode("https://www.baidu.com", 200,200);
+        String binary =QRCodeUtil1.creatRrCode("https://www.baidu.comWW", 200,200);
         System.out.println(binary);
     }
 

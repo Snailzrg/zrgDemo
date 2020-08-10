@@ -5,7 +5,7 @@ package util.QRCodeUtil;
  * 2018/12/14 14:24
  */
 import com.google.zxing.*;
-import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
+//import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
@@ -34,7 +34,7 @@ import java.util.Random;
             Hashtable<EncodeHintType, Object> hints = new Hashtable<EncodeHintType, Object>();
             hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);//设置二维码的容错等级  容错越高 带的信息越少
             hints.put(EncodeHintType.CHARACTER_SET, CHARSET);//utf-8
-            hints.put(EncodeHintType.MARGIN, 2);// 边距
+            //hints.put(EncodeHintType.MARGIN, 2);// 边距
             BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, QRCODE_SIZE, QRCODE_SIZE,hints);
             // 生成QR二维码数据——这里只是得到一个由true和false组成的数组
             // 参数顺序分别为：编码内容，编码类型，生成图片宽度，生成图片高度，设置参数
@@ -221,14 +221,15 @@ import java.util.Random;
             if (image == null) {
                 return null;
             }
-            BufferedImageLuminanceSource source = new BufferedImageLuminanceSource(image);
-            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
-            Result result;
-            Hashtable<DecodeHintType, Object> hints = new Hashtable<DecodeHintType, Object>();
-            hints.put(DecodeHintType.CHARACTER_SET, CHARSET);
-            result = new MultiFormatReader().decode(bitmap, hints);
-            String resultStr = result.getText();
-            return resultStr;
+//            BufferedImageLuminanceSource source = new BufferedImageLuminanceSource(image);
+//            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+//            Result result;
+//            Hashtable<DecodeHintType, Object> hints = new Hashtable<DecodeHintType, Object>();
+//            hints.put(DecodeHintType.CHARACTER_SET, CHARSET);
+//            result = new MultiFormatReader().decode(bitmap, hints);
+//            String resultStr = result.getText();
+//            return resultStr;
+            return "8";
         }
 
         /**
