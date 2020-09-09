@@ -108,7 +108,7 @@ public class StringUtil extends org.apache.commons.lang3.StringUtils {
 	/**
 	 * 缩略字符串（不区分中英文字符）.
 	 * 
-	 * @param
+	 * @param param
 	 * 			目标字符串
 	 * @param length 
 	 * 			截取长度
