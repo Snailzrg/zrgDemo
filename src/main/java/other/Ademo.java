@@ -1,6 +1,8 @@
 package other;
 
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,6 +15,15 @@ public class Ademo {
 
         List<String> demoList = Arrays.asList(dayData);
         String  ss = "货币资金";
+
+//方法 一
+        System.out.println(System.currentTimeMillis());
+
+//方法 二
+                System.out.println(Calendar.getInstance().getTimeInMillis());
+
+//方法 三
+        System.out.println(new Date().getTime());
 
 
 
